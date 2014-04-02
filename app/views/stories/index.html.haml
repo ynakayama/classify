@@ -1,0 +1,40 @@
+.page-header
+  %h2 一覧
+  %small カテゴリ判定されたテキストの一覧です
+
+.admin-index
+  .container
+    .content
+      .row
+        .span12
+          %table{:class => 'table table-bordered table-striped'}
+            %thead
+              %tr
+                %th
+                  ID
+                %th
+                  テキスト
+                %th
+                  分類
+                %th
+                  作成日時
+                %th
+                  処理
+            %tbody
+              - @stories.each do |story|
+                %tr
+                  %td
+                    = link_to story.id, story_path(story)
+                  %td
+                    = story.text
+                  %td
+                    = story.classify
+                  %td
+                    = story.created_at.strftime "%Y/%m/%d %X"
+                  %td
+                    = link_to '詳細', story_path(story)
+
+          = paginate @stories, :window => 8
+
+  %p{:class=>"pull-right pager"}
+    = link_to "カテゴリ判定器に戻る", root_path

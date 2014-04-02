@@ -1,0 +1,13 @@
+%section
+  .container
+    .page-header
+      %h2 詳細
+      %small カテゴリ分類の詳細情報です
+    .row
+      .span10.offset1
+        = render 'detail'
+
+  %p{:class=>"pull-left pager"}
+    = link_to "カテゴリ判定器に戻る", root_path
+  %p{:class=>"pull-right pager"}
+    = link_to "テキスト一覧に戻る", stories_path

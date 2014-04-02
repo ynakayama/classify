@@ -1,0 +1,14 @@
+
+one:
+  id: 1
+  text: 'ほげ'
+  classify: '経済'
+  social: 0.14324842252964604
+  politics: 0.13791307354291868
+  international: 0.14110682616439282
+  economics: 0.1481757691782479
+  electro: 0.04963561720714009
+  sports: 0.14221163427495845
+  entertainment: 0.09512594723966847
+  science: 0.14258270986302762
+

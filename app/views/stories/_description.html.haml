@@ -1,0 +1,39 @@
+.span6
+  %table{:class => 'table table-bordered table-striped'}
+    %thead
+      %tr
+        %th{:style => "width: 150px;"} 項目
+        %th 内容
+    %tbody
+      %tr
+        %td カテゴリ分類
+        %td= session[:classify]
+      %tr
+        %td 社会
+        %td= session[:social]
+      %tr
+        %td 政治
+        %td= session[:politics]
+      %tr
+        %td 国際
+        %td= session[:international]
+      %tr
+        %td 経済
+        %td= session[:economics]
+      %tr
+        %td 電脳
+        %td= session[:electro]
+      %tr
+        %td スポーツ
+        %td= session[:sports]
+      %tr
+        %td エンタメ
+        %td= session[:entertainment]
+      %tr
+        %td 科学
+        %td= session[:science]
+
+  %p{:class=>"pull-left pager"}
+    = link_to "実装の説明", "http://blog.id774.net/post/2013/07/31/390/"
+  %p{:class=>"pull-right pager"}
+    = link_to "テキスト一覧を見る", stories_path

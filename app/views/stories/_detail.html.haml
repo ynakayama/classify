@@ -1,0 +1,42 @@
+%table{:class => 'table table-bordered table-striped'}
+  %thead
+    %tr
+      %th{:style => "width: 150px;"} 項目
+      %th 内容
+  %tbody
+    %tr
+      %td ID
+      %td= @story.id
+    %tr
+      %td 作成日時
+      %td= @story.created_at.strftime "%Y/%m/%d %X"
+    %tr
+      %td カテゴリ分類
+      %td= @story.classify
+    %tr
+      %td 社会
+      %td= @story.social
+    %tr
+      %td 政治
+      %td= @story.politics
+    %tr
+      %td 国際
+      %td= @story.international
+    %tr
+      %td 経済
+      %td= @story.economics
+    %tr
+      %td 電脳
+      %td= @story.electro
+    %tr
+      %td スポーツ
+      %td= @story.sports
+    %tr
+      %td エンタメ
+      %td= @story.entertainment
+    %tr
+      %td 科学
+      %td= @story.science
+    %tr
+      %td テキスト
+      %td= @story.text
